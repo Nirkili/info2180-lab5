@@ -3,7 +3,14 @@ $host = 'localhost';
 $username = 'lab5_user';
 $password = 'password123';
 $dbname = 'world';
-$query = strip_tags($_GET['country']);
+
+if (isset($_GET['country'])) {
+  $query = strip_tags($_GET['country']);
+} 
+else {
+  $query = '';
+}
+
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 
 if($query == ''){
