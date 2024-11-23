@@ -1,7 +1,11 @@
 /* Add your own styles */
-
+:root{
+    --shadow: rgb(143, 142, 142);
+    --border: rgb(186, 185, 185);
+}
 header{
-    background-color: rgb(46, 110, 89);
+    display: flex;
+    background-color: rgb(136, 220, 192);
     font-weight: bold;
     align-items: center;
     justify-content: center;
@@ -14,40 +18,57 @@ header{
 }
 
 body{
+    font-family: 'Times New Roman', Times, serif;
     display: grid;
-    color: white;
-    background-color: rgb(7, 20, 62);
+    color: rgb(0, 0, 0);
+    background-color: rgb(221, 242, 242);
     grid-template-columns: 10% 80% 10%;
 }
 
 main{
     grid-column: 2;
-    text-align: center;
+    text-align: left;
 }
 
 #controls{
-    padding-top: 10px;
+    padding-top: 60px;
 }
 
 #country{
     padding: 10px;
     border: none;
     border-radius: 5px;
-    width: 80%;
-    box-shadow: 0px 2px 5px 0px rgb(0, 0, 0);
+    width: 60%;
+    box-shadow: 0px 2px 5px 0px var(--shadow);
 }
+
 
 #lookup{
     border: none;
     border-radius: 5px;
     padding: 10px;
-    background-color: white;
-    box-shadow: 0px 2px 5px 0px rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 5px 0px var(--shadow);
     cursor: pointer;
 }
 
 
 #result{
-    grid-column: 2;
-    padding-top: 15px;
+    padding-top: 30px;
+}
+
+td{
+    border: 0.5px solid var(--border);
+    
+}
+
+table{
+    width: 100%;
+    border: 0.5px solid var(--border);
+    border-collapse: collapse;
+} 
+
+th{
+    text-align: center;
+    border: 0.5px solid var(--border);
 }
