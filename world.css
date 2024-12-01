@@ -1,11 +1,15 @@
 /* Add your own styles */
+/*custom shadow colour and border*/
 :root{
     --shadow: rgb(143, 142, 142);
     --border: rgb(186, 185, 185);
+    --maincolor:  rgb(136, 220, 192);
+    --bodycolor: rgb(221, 242, 242);
 }
+
 header{
     display: flex;
-    background-color: rgb(136, 220, 192);
+    background-color: var(--maincolor);
     font-weight: bold;
     align-items: center;
     justify-content: center;
@@ -21,7 +25,7 @@ body{
     font-family: 'Times New Roman', Times, serif;
     display: grid;
     color: rgb(0, 0, 0);
-    background-color: rgb(221, 242, 242);
+    background-color: var(--bodycolor);
     grid-template-columns: 10% 80% 10%;
 }
 
@@ -43,7 +47,7 @@ main{
 }
 
 
-#lookup{
+#lookup, #cityLookup{
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -52,14 +56,21 @@ main{
     cursor: pointer;
 }
 
+#lookup:hover{
+    background-color: var(--maincolor);
+    color: white;
+}
+
+#cityLookup:hover{
+    background-color: var(--bodycolor);
+}
 
 #result{
     padding-top: 30px;
 }
 
 td{
-    border: 0.5px solid var(--border);
-    
+    border: 0.5px solid var(--border);   
 }
 
 table{
@@ -71,4 +82,8 @@ table{
 th{
     text-align: center;
     border: 0.5px solid var(--border);
+}
+
+tr:nth-child(odd){
+    background-color: whitesmoke;
 }
